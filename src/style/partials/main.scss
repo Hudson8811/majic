@@ -46,6 +46,7 @@ input, textarea{
 	position: fixed;
 	left: 0;
 	top: 0;
+	z-index: 100;
 	width: 100%;
 	height: 60px;
 	background-color: #47b1c8;
@@ -235,6 +236,7 @@ input, textarea{
 	border-radius: 5px;
 	border: 1px solid #e6e6e6;
 	padding: 20px 20px 20px 25px;
+	box-sizing: border-box;
 	.title-block{
 		color: #2d2f32;
 		font-size: 1.125rem;
@@ -249,14 +251,8 @@ input, textarea{
 			background-color: #5ba7cf;
 		}
 	}
-	.big-title-block{
-		display: block;
-		margin-bottom: 25px;
-		color: #2d2f32;
-		font-size: 1.5rem;
-		font-weight: 400;
-	}
 }
+
 
 .sidemenu{
 	width: 100%;
@@ -431,7 +427,8 @@ input, textarea{
 	display: flex;
 	margin-top: 30px;
 	padding-bottom: 44px;
-	border-bottom: 1px solid #e6e6e6;;
+	margin-bottom: 5px;
+	border-bottom: 1px solid #e6e6e6;
 	.director-info-block{
 		display: flex;
 		width: 470px;
@@ -513,7 +510,106 @@ input, textarea{
 		+.school-hello-block{
 			max-width: 550px;
 			margin-left: 30px;
+			margin-top: 10px;
 		}
 	}
 
+	.school-hello-block{
+		.hello-block{
+			.big-title-block{
+				margin-bottom: 15px;
+			}
+			.text{
+				color: #474950;
+				font-size: 0.875rem;
+				font-weight: 400;
+				line-height: 1.375rem;
+			}
+		}
+		>*+*{
+			margin-top: 30px;
+		}
+		.priem-block{
+			display: flex;
+			align-items: flex-start;
+			.img{
+				flex-shrink: 0;
+				width: 97px;
+				img{
+					width: 100%;
+					display: block;
+				}
+			}
+			.text-block{
+				margin-left: 12px;
+				margin-top: 12px;
+				.label{
+					color: #2d2f32;
+					font-size: 1.25rem;
+					font-weight: 400;
+				}
+				.text{
+					margin-top: 4px;
+					color: #2d2f32;
+					font-size: 0.875rem;
+					font-weight: 400;
+					line-height: 1.125rem;
+					a{
+						color: #da2238;
+						text-decoration: underline;
+						&:hover{
+							text-decoration: none;
+						}
+					}
+				}
+			}
+		}
+	}
+
+}
+
+.home-main-block{
+	+.home-main-block{
+		margin-top: 25px;
+	}
+	.big-title-block{
+		display: block;
+		margin-bottom: 25px;
+		color: #2d2f32;
+		font-size: 1.5rem;
+		font-weight: 400;
+		vertical-align: middle;
+	}
+
+	.text-style{
+		color: #474950;
+		font-size: 0.875rem;
+		font-weight: 400;
+		line-height: 1.375rem;
+	}
+
+	.flex-block{
+		@include flex-row(25px, 25px);
+		.item{
+			@include flex-block(300px,25px, 25px,true,3);
+		}
+	}
+
+	&.alert-block{
+		.big-title-block{
+			padding-left: 39px;
+			position: relative;
+			&::before{
+				content: "";
+				display: block;
+				width: 29px;
+				height: 28px;
+				position: absolute;
+				left: 0;
+				top: 1px;
+				background: url("../img/alert.svg") center center no-repeat;
+				background-size: contain;
+			}
+		}
+	}
 }
