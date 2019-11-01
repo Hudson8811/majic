@@ -302,14 +302,17 @@ input[type=radio] {
 	}
 	textarea{
 		resize: none;
+		height: 120px;
 	}
 	label.input-block{
 		color: #474950;
 		font-size: 0.875rem;
 		font-weight: 400;
+		margin-bottom: 19px;
 		input,textarea, select{
 			display: block;
 			margin-top: 5px;
+			width: 100%;
 		}
 	}
 }
@@ -824,5 +827,9 @@ input[type=radio] {
 				background-size: contain;
 			}
 		}
+		.comments-form{
+
+		}
 	}
 }
+
