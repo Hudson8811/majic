@@ -287,6 +287,33 @@ input[type=radio] {
 	}
 }
 
+.form-style{
+	input,textarea, select{
+		border-radius: 5px;
+		border: 1px solid #a6a6a6;
+		background-color: #ffffff;
+		padding: 10px 13px;
+		box-sizing: border-box;
+		color: #2d2f32;
+		font-family: $font1;
+		font-size: 0.875rem;
+		font-weight: 400;
+		max-width: 100%;
+	}
+	textarea{
+		resize: none;
+	}
+	label.input-block{
+		color: #474950;
+		font-size: 0.875rem;
+		font-weight: 400;
+		input,textarea, select{
+			display: block;
+			margin-top: 5px;
+		}
+	}
+}
+
 .home-block{
 	border-radius: 5px;
 	border: 1px solid #e6e6e6;
@@ -777,6 +804,24 @@ input[type=radio] {
 						}
 					}
 				}
+			}
+		}
+	}
+
+	&.comments-block{
+		.big-title-block{
+			padding-left: 39px;
+			position: relative;
+			&::before{
+				content: "";
+				display: block;
+				width: 33px;
+				height: 28px;
+				position: absolute;
+				left: 0;
+				top: 1px;
+				background: url("../img/comment.svg") center center no-repeat;
+				background-size: contain;
 			}
 		}
 	}
