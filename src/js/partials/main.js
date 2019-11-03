@@ -12,6 +12,18 @@ $(document).ready(function() {
             prevEl: '.slider-button-prev',
         },
     });
+
+
+    $('.sidemenu .menu .has-child > a').click(function () {
+        event.preventDefault();
+        $(this).parent().toggleClass('opened');
+    });
+
+    $('.sidebar .news').click(function () {
+        if (!$(this).hasClass('full-news')){
+            $(this).addClass('full-news').siblings().removeClass('full-news');
+        }
+    });
 });
 
 
