@@ -14,6 +14,9 @@
   height: 60px;
   justify-content: center;
   align-items: center;
+  @include media((
+          font-size: (sm: 20px),
+  ));
   >*{
     margin-right: 30px;
     &:last-child{
@@ -34,6 +37,9 @@
   width:35px;
   padding: 0;
   vertical-align: middle;
+  @include media((
+          height: (sm: 28px),
+  ));
 }
 .fs-n{
   font-size:16px;
@@ -45,12 +51,21 @@
   font-size:24px;
 }
 
+.fs-outer, .cs-outer{
+  @include media((
+          display: (sm: block),
+  ));
+}
+
 .cs-outer button{
   display:inline-block;
   height:35px;
   width:35px;
   padding: 0;
   vertical-align: middle;
+  @include media((
+          height: (sm: 28px),
+  ));
 }
 
 .cs-bw, .cs-bw:focus, .cs-bw:hover{

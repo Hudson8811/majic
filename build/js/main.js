@@ -160,7 +160,29 @@ $(document).ready(function() {
             $(this).addClass('full-news').siblings().removeClass('full-news');
         }
     });
+
+    $('.mobile-menu-toggle').click(function () {
+        event.preventDefault();
+        $(this).toggleClass('active');
+        $('.fixed-header .sidemenu').slideToggle();
+        if ($('.mobile-icons .search-btn').hasClass('active')){
+            $('.mobile-icons .search-btn').removeClass('active');
+            $('.fixed-header .search-form').removeClass('active');
+        }
+    });
+
+    $('.mobile-icons .search-btn').click(function () {
+        event.preventDefault();
+        $(this).toggleClass('active');
+        $('.fixed-header .search-form').toggleClass('active');
+        if ($('.mobile-menu-toggle').hasClass('active')){
+            $('.mobile-menu-toggle').removeClass('active');
+            $('.fixed-header .sidemenu').slideUp();
+        }
+    });
 });
+
+$('.fixed-header .sidemenu .menu').append($('.sidebar .sidemenu .menu').html());
 $(document).ready(function() {
     $(document).ready(function(){
         var selector='html';

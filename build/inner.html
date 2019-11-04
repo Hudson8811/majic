@@ -22,6 +22,20 @@
                 <button type="submit"></button>
             </form>
             <a href="javascript:;" id="sv_on" class="low_see">Версия для слабовидящих</a>
+    
+            <div class="mobile-icons">
+                <a href="" class="search-btn"></a>
+                <a href="javascript:;" class="mobile-menu-toggle">
+                    <svg viewBox="0 0 100 100">
+                        <path class="line top" d="m 70,38 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,4.5 h 20 v -20" />
+                        <path class="line middle" d="m 70,50 h -40" />
+                        <path class="line bottom" d="m 30,62 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-4.5 h -20 v 20" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="sidemenu">
+            <ul class="menu"></ul>
         </div>
     </div>
     
@@ -212,7 +226,7 @@
                         </div>
                         <div class="tr">
                             <div class="td"></div>
-                            <div class="td"><a href="" download class="document">Положение</a> <span class="document-info">(PDF; 1.57 Мб)</span></div>
+                            <div class="td"><a href="" download class="document"><span class="document-name">Положение</span> <span class="document-info">(PDF; 1.57 Мб)</span></a></div>
                         </div>
                     </div>
                 </fieldset>
@@ -226,7 +240,7 @@
                         </div>
                         <div class="tr">
                             <div class="td">Карта:</div>
-                            <div class="td"><div id="map"></div></div>
+                            <div class="td" id="map"></div>
                         </div>
                     </div>
                 </fieldset>
@@ -234,8 +248,8 @@
                 <fieldset class="inner-page-block">
                     <legend>Устав образовательной организации</legend>
                     <ul>
-                        <li><a href="" download class="document">Устав 9.11.15</a> <span class="document-info">(PDF; 653.24 Кб)</span></li>
-                        <li><a href="" download class="document">Изменения в Устав колледжа</a> <span class="document-info">(PDF; 1.13 Мб)</span></li>
+                        <li><a href="" download class="document"><span class="document-name">Устав 9.11.15</span> <span class="document-info">(PDF; 653.24 Кб)</span></a></li>
+                        <li><a href="" download class="document"><span class="document-name">Изменения в Устав колледжа</span> <span class="document-info">(PDF; 1.13 Мб)</span></a></li>
                     </ul>
                 </fieldset>
 
@@ -244,21 +258,19 @@
                     <div class="group-block">
                         <div class="group-title">Год: 2016</div>
                         <ul>
-                            <li><a href="" download class="document">Отчет о деятельности учреждения за 2016 год</a> <span class="document-info">(PDF; 351.84 Кб)</span></li>
+                            <li><a href="" download class="document"><span class="document-name">Отчет о деятельности учреждения за 2016 год</span> <span class="document-info">(PDF; 351.84 Кб)</span></a></li>
                         </ul>
                     </div>
                     <div class="group-block">
                         <div class="group-title">Год: 2017</div>
                         <ul>
-                            <li><a href="" download class="document">Отчет о деятельности учреждения за 2017 год</a> <span class="document-info">(PDF; 531.75 Кб)</span></li>
+                            <li><a href="" download class="document"><span class="document-name">Отчет о деятельности учреждения за 2017 год</span> <span class="document-info">(PDF; 531.75 Кб)</span></a></li>
                         </ul>
                     </div>
                 </fieldset>
             </div>
         </div>
     </div>
-
-
 
 
     <div class="footer">
@@ -289,31 +301,39 @@
             </span>
         </span>
     </div>
-
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-    <script type="text/javascript">
-        ymaps.ready(init);
-        var myMap,
-            myPlacemark;
-
-        function init(){
-            myMap = new ymaps.Map("map", {
-                center: [52.891082, 40.458638],
-                zoom: 17,
-                controls: []
-            });
-
-            myPlacemark = new ymaps.Placemark([52.891082, 40.458638], {
-                iconCaption : 'Липецкое шоссе, 114A',
-                balloonContent: 'Липецкое шоссе, 114A',
-            });
-
-            myMap.geoObjects.add(myPlacemark);
-        }
-    </script>
-
 </div>
 
 <script src="js/main.js"></script>
+
+
+
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script type="text/javascript">
+    ymaps.ready(init);
+    var myMap,
+        myPlacemark;
+
+    function init(){
+        myMap = new ymaps.Map("map", {
+            center: [52.891082, 40.458638],
+            zoom: 17,
+            controls: []
+        });
+
+        myPlacemark = new ymaps.Placemark([52.891082, 40.458638], {
+            iconCaption : 'Липецкое шоссе, 114A',
+            balloonContent: 'Липецкое шоссе, 114A',
+        });
+
+        myMap.geoObjects.add(myPlacemark);
+    }
+
+    $(window).resize(function () {
+        if ($(window).width() < 1500) {
+            $('#map > ymaps').css('width','0');
+            myMap.container.fitToViewport();
+        }
+    });
+</script>
 </body>
 </html>
