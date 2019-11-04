@@ -217,6 +217,11 @@ input, textarea{
 		max-height: calc(100vh - 60px);
 		overflow-y: auto;
 		overflow-x: hidden;
+		border-bottom: 4px solid #47b1c8;
+		.menu{
+			border-radius: 0;
+			border: none;
+		}
 		@media all and (min-width: 1025px) {
 			display: none !important;
 		}
