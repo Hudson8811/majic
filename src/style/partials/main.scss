@@ -545,6 +545,9 @@ input[type=radio] {
 		line-height: 40px;
 		padding-left: 12px;
 		box-sizing: border-box;
+		position: sticky;
+		top: 0;
+		z-index: 10;
 		&::before{
 			content: "";
 			display: inline-block;
@@ -738,12 +741,46 @@ input[type=radio] {
 }
 
 .main-content{
-	padding-top: 40px;
 	width: calc(100% - 356px);
 	@include media((
 					width: (md: 100%),
 					padding-top: (md: 0),
 	));
+}
+
+.breads{
+	height: 40px;
+	display: flex;
+	align-items: center;
+	font-size: 0.875rem;
+	line-height: 1;
+	overflow: hidden;
+	@include media((
+					display: (md: none),
+	));
+	a{
+		color: #47b1c8;
+		text-decoration: underline;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		&:hover{
+			text-decoration: none;
+		}
+	}
+	span.current{
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+	.sep{
+		margin: 0 10px;
+		display: block;
+		width: 7px;
+		height: 12px;
+		background: url("../img/bread.svg") center center no-repeat;
+		background-size: contain;
+	}
 }
 
 .home-slider{
