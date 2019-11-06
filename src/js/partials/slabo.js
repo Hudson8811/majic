@@ -1,7 +1,7 @@
 $(document).ready(function() {
     $(document).ready(function(){
         var selector='html';
-        var selector2='*:not(input,select,button,.swiper-pagination-bullet-active)';
+        var selector2='*:not(input,select,button)';
         $('.fs-outer button').click(function(){
             $(selector).css('font-size',$(this).css('font-size'));
             $.cookie('font-size',$(this).attr('id'));

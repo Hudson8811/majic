@@ -15,7 +15,7 @@
   justify-content: center;
   align-items: center;
   @include media((
-          font-size: (sm: 20px),
+          display: (sm: none),
   ));
   >*{
     margin-right: 30px;
@@ -52,9 +52,7 @@
 }
 
 .fs-outer, .cs-outer{
-  @include media((
-          display: (sm: block),
-  ));
+  display: block;
 }
 
 .cs-outer button{

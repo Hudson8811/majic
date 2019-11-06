@@ -12,7 +12,6 @@
       <a href="javascript:;" id="sv_on" class="low_see">Версия для слабовидящих</a>
 
       <div class="mobile-icons">
-        <a href="" class="search-btn"></a>
         <a href="javascript:;" class="mobile-menu-toggle">
           <svg viewBox="0 0 100 100">
             <path class="line top" d="m 70,38 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,4.5 h 20 v -20" />
