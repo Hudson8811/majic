@@ -6,7 +6,6 @@
     <xsl:import href="footer.xsl"/>
     <xsl:import href="lowsee.xsl"/>
     <xsl:import href="breads.xsl"/>
-    <xsl:import href="homecontent.xsl"/>
     <xsl:import href="innercontent.xsl"/>
 
 
@@ -26,7 +25,7 @@
 
                         <h1 class="page-title"><xsl:value-of select="$pagename"/></h1>
 
-                        <xsl:call-template name="content" />
+                        <xsl:call-template name="innercontent" />
                     </div>
                 </div>
             </div>
@@ -38,16 +37,5 @@
         </div>
     </xsl:template>
 
-
-    <xsl:template name="content">
-        <xsl:choose>
-            <xsl:when test="$pageId = '1'">
-                <xsl:call-template name="homecontent" />
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:call-template name="innercontent" />
-            </xsl:otherwise>
-        </xsl:choose>
-    </xsl:template>
 
 </xsl:stylesheet>

@@ -6,9 +6,9 @@
     <xsl:template name="fixed-header">
         <div class="fixed-header">
             <div class="container">
-                <form action="/" class="search-form">
-                    <input type="text" placeholder="Поиск по сайту..." required="required" />
-                    <button type="submit"></button>
+                <form action="search_text();return false;" name="frm_s" class="search-form">
+                    <input type="text" name="search_t" placeholder="Поиск по сайту..." required="required" />
+                    <button type="submit" name="search_b"></button>
                 </form>
                 <a href="javascript:;" id="sv_on" class="low_see">Версия для слабовидящих</a>
 

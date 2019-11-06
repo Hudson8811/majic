@@ -2,8 +2,6 @@
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-    <xsl:variable name="pagename"><xsl:value-of select="page/meta/title"/></xsl:variable>
-    <xsl:variable name="pageId"><xsl:value-of select="page/meta/pageId"/></xsl:variable>
 
     <xsl:template name="head">
         <meta charset="UTF-8"/>

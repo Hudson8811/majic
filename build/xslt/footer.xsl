@@ -6,7 +6,7 @@
         <div class="footer">
             <div class="container">
                 <div class="text">
-                    <p>Дата последнего обновления страницы <xsl:value-of select="page/meta/lastUpdate"/></p>
+                    <p>Дата последнего обновления страницы <xsl:value-of select="EditPasport/Eduinfo/Created"/></p>
                     <p>Сайт создан по технологии <a href="#">«Конструктор сайтов e-Publish»</a></p>
                 </div>
             </div>

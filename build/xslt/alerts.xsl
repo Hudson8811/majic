@@ -2,29 +2,21 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
     <xsl:template name="alerts">
-        <div class="home-main-block alert-block">
-            <div class="big-title-block">Объявления</div>
-            <div class="flex-block">
-                <div class="item home-block">
-                    <div class="title-block">День знаний!</div>
-                    <div class="text-style">
-                        <p>День знаний был объявлен государственным праздником в 1980 году, но только в 1984 его массово отметили во всех советских школах. Сделать первым учебным днем именно 1 Сентября решили коммунисты — в 1935 году они обязали все учебные заведения начинать учебный год в первый день осени. До этого в стране не было единой даты начала школьных занятий.</p>
-                    </div>
-                </div>
-                <div class="item home-block">
-                    <div class="title-block">Мы против террора!</div>
-                    <div class="text-style">
-                        <p>В России ежегодно 3 сентября отмечается особая дата - День солидарности в борьбе с терроризмом. В этот день россияне с горечью вспоминают людей, погибших от рук террористов, а так же тех сотрудников правоохранительных органов, которые погибли во время выполнения служебного долга. В нашей стране трагическая дата 3 сентября теперь неразрывно связана с ужасающими событиями, произошедшими в Беслане совсем недавно – с 1 по 3 сентября 2004 года.</p>
-                    </div>
-                </div>
-                <div class="item home-block">
-                    <div class="title-block">Теперь Вы можете подать заявление на Госуслугах!</div>
-                    <div class="text-style">
-                        <p>Справочно-информационный интернет-портал. По данным Минкомсвязи, по состоянию на апрель 2019 года на портале были зарегистрированы 86,5 млн россиян.</p>
-                    </div>
+        <xsl:if test="count(EditPasport/Eduinfo/Anons/item) > 0">
+            <div class="home-main-block alert-block">
+                <div class="big-title-block">Объявления</div>
+                <div class="flex-block">
+                    <xsl:for-each select="EditPasport/Eduinfo/Anons/item">
+                        <div class="item home-block">
+                            <div class="title-block"><xsl:value-of select="Name"/></div>
+                            <div class="text-style">
+                                <p><xsl:value-of select="ItemName"/></p>
+                            </div>
+                        </div>
+                    </xsl:for-each>
                 </div>
             </div>
-        </div>
+        </xsl:if>
     </xsl:template>
 
 </xsl:stylesheet>

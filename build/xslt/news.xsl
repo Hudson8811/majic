@@ -3,60 +3,51 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
     <xsl:template name="news">
-        <div class="rss-news home-block">
+
+        <xsl:if test="count(EditPasport/Eduinfo/NewsTheme/item)>0">
+            <div class="rss-news home-block">
             <div class="title-block">RSS Новости</div>
-            <div class="news full-news">
-                <div class="news-title-row">
-                    <span class="news-title">День знаний!</span>
-                    <span class="news-date">01.09.2019</span>
-                </div>
-                <div class="news-content">
-                    <img src="img/rss-test.png" alt="" />
-                    <div class="news-text">День знаний был объявлен государственным праздником в 1980 году, но только в 1984 его массово отметили во всех советских школах. Сделать первым учебным днем именно 1 Сентября решили коммунисты — в 1935 году они обязали все учебные заведения начинать учебный год в первый день осени. До этого в стране не было единой даты начала школьных занятий</div>
-                    <div class="news-link-row">
-                        <a href="" class="more">Подробнее >>></a>
-                    </div>
-                </div>
+                <xsl:for-each select="EditPasport/Eduinfo/NewsTheme/item">
+                    <xsl:variable name="link"><xsl:value-of select="Photo/item/Link"/></xsl:variable>
+                    <xsl:variable name="url"><xsl:value-of select="URL"/></xsl:variable>
+                    <xsl:choose>
+                        <xsl:when test="position()=1">
+                            <div class="news full-news">
+                                <div class="news-title-row">
+                                    <span class="news-title"><xsl:value-of select="Name"/></span>
+                                    <span class="news-date"><xsl:value-of select="NewsDate"/></span>
+                                </div>
+                                <div class="news-content">
+                                    <xsl:if test="$link!=''"><img src="{$link}" alt="" /></xsl:if>
+                                    <div class="news-text"><xsl:value-of select="ItemName"/></div>
+                                    <div class="news-link-row">
+                                        <a href="{$url}" class="more">Подробнее >>></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <div class="news">
+                                <div class="news-title-row">
+                                    <span class="news-title"><xsl:value-of select="Name"/></span>
+                                    <span class="news-date"><xsl:value-of select="NewsDate"/></span>
+                                </div>
+                                <div class="news-content">
+                                    <xsl:if test="$link!=''"><img src="{$link}" alt="" /></xsl:if>
+                                    <div class="news-text"><xsl:value-of select="ItemName"/></div>
+                                    <div class="news-link-row">
+                                        <a href="{$url}" class="more">Подробнее >>></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </xsl:otherwise>
+                    </xsl:choose>
+
+
+                </xsl:for-each>
             </div>
-            <div class="news">
-                <div class="news-title-row">
-                    <span class="news-title">Мы против террора!</span>
-                    <span class="news-date">01.09.2019</span>
-                </div>
-                <div class="news-content">
-                    <div class="news-text">День знаний был объявлен государственным праздником в 1980 году, но только в 1984 его массово отметили во всех советских школах. Сделать первым учебным днем именно 1 Сентября решили коммунисты — в 1935 году они обязали все учебные заведения начинать учебный год в первый день осени. До этого в стране не было единой даты начала школьных занятий</div>
-                    <div class="news-link-row">
-                        <a href="" class="more">Подробнее >>></a>
-                    </div>
-                </div>
-            </div>
-            <div class="news">
-                <div class="news-title-row">
-                    <span class="news-title">Теперь Вы можете подать заявление на Госуслугах!</span>
-                    <span class="news-date">01.09.2019</span>
-                </div>
-                <div class="news-content">
-                    <img src="img/rss-test.png" alt="" />
-                    <div class="news-text">День знаний был объявлен государственным праздником в 1980 году, но только в 1984 его массово отметили во всех советских школах. Сделать первым учебным днем именно 1 Сентября решили коммунисты — в 1935 году они обязали все учебные заведения начинать учебный год в первый день осени. До этого в стране не было единой даты начала школьных занятий</div>
-                    <div class="news-link-row">
-                        <a href="" class="more">Подробнее >>></a>
-                    </div>
-                </div>
-            </div>
-            <div class="news">
-                <div class="news-title-row">
-                    <span class="news-title">Классные часы, посвященные ПДД</span>
-                    <span class="news-date">01.09.2019</span>
-                </div>
-                <div class="news-content">
-                    <img src="img/rss-test.png" alt="" />
-                    <div class="news-text">День знаний был объявлен государственным праздником в 1980 году, но только в 1984 его массово отметили во всех советских школах. Сделать первым учебным днем именно 1 Сентября решили коммунисты — в 1935 году они обязали все учебные заведения начинать учебный год в первый день осени. До этого в стране не было единой даты начала школьных занятий</div>
-                    <div class="news-link-row">
-                        <a href="" class="more">Подробнее >>></a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </xsl:if>
+
     </xsl:template>
 
 </xsl:stylesheet>
