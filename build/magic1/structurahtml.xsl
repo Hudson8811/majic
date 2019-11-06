@@ -68,7 +68,15 @@
 
                 <div class="main-content">
 
-                    <div class="breads"></div>
+                    <div class="breads">
+                        <a href="">Главная</a>
+                        <span class="sep"></span>
+                        <a href="">Информационная безопасность</a>
+                        <span class="sep"></span>
+                        <a href="">Обучающимся</a>
+                        <span class="sep"></span>
+                        <span class="current">Пример внутренней страницы</span>
+                    </div>
 
                     <h1 class="page-title"><xsl:value-of select="$pagename"/></h1>
 
