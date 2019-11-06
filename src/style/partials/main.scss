@@ -541,11 +541,11 @@ input[type=radio] {
 		color: #fff;
 		font-size: 1rem;
 		width: 100%;
-		line-height: 40px;
+		line-height: 39px;
 		padding-left: 12px;
 		box-sizing: border-box;
 		position: sticky;
-		top: 0;
+		top: 1px;
 		z-index: 10;
 		&::before{
 			content: "";
