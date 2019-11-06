@@ -7,6 +7,7 @@
     <xsl:import href="lowsee.xsl"/>
     <xsl:import href="breads.xsl"/>
     <xsl:import href="homecontent.xsl"/>
+    <xsl:import href="innercontent.xsl"/>
 
 
     <xsl:template name="container">
@@ -39,7 +40,14 @@
 
 
     <xsl:template name="content">
-        <xsl:call-template name="homecontent" />
+        <xsl:choose>
+            <xsl:when test="$pageId = '1'">
+                <xsl:call-template name="homecontent" />
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:call-template name="innercontent" />
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
 
 </xsl:stylesheet>
