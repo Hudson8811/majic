@@ -401,7 +401,6 @@ input, textarea{
 	}
 	.sidebar{
 		width: 311px;
-		padding-right: 17px;
 		@include media((
 						display: (md: none),
 		));
