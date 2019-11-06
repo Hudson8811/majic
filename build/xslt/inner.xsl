@@ -7,7 +7,19 @@
         <xsl:value-of select="EditPasport/Eduinfo/Design"/>
     </xsl:variable>
 
-    <xsl:variable name="pagename" >Главная страница</xsl:variable>
+    <xsl:template name="breads">
+        <div class="breads">
+            <a href="">Главная</a>
+            <span class="sep"></span>
+            <a href="">Информационная безопасность</a>
+            <span class="sep"></span>
+            <a href="">Обучающимся</a>
+            <span class="sep"></span>
+            <span class="current">Пример внутренней страницы</span>
+        </div>
+    </xsl:template>
+
+    <xsl:variable name="pagename" >Пример внутренней страницы</xsl:variable>
 
     <xsl:template match="/">
         <html>
