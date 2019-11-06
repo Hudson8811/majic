@@ -1,7 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-    <xsl:template name="director">
+
+    <xsl:import href="structurahtml.xsl"/>
+    <xsl:import href="scriptsandcss.xsl"/>
+
+
+    <xsl:variable name="pagename" >Главная страница</xsl:variable>
+
+    <xsl:template match="/">
+
+        <html>
+            <head>
+                <meta name='Keywords' content='Тестовая организация. И сайт её тестовый. Для тестов всяких нововведений., конструктор сайтов, создание сайтов, создание сайта, сайты детских садов, сайты школ, создание сайта школы, создание сайта детского сайта' />
+                <meta name='geo.placename' content='Кривоколенный пер, д.4, ст.5, Москва г., Москва г., Российская Федерация101000, ' />
+                <title>Тестовая организация. И сайт её тестовый. Для тестов всяких нововведений. - Основные сведения</title>
+
+
+                <xsl:call-template name="ScriptsAndCSS" />
+
+            </head>
+
+            <body>
+
+                <xsl:call-template name="StructuraHTML" />
+
+            </body>
+        </html>
+    </xsl:template>
+
+    <xsl:template name="Content">
+
+        <xsl:choose>
+            <xsl:when test="not(EditPasport/Eduinfo/Slider)">
+            </xsl:when>
+            <xsl:otherwise>
+
+                <div class="home-slider">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <xsl:for-each select="EditPasport/Eduinfo/Slider/Slide/item">
+                                <xsl:variable name="link"><xsl:value-of select="LinkFile/Link"/></xsl:variable>
+                                <xsl:variable name="alt"><xsl:value-of select="Name"/></xsl:variable>
+                                <xsl:if test="$link!=''">
+                                    <div class="swiper-slide"><img src="{$link}" alt="{$alt}" title="{$alt}" /></div>
+                                </xsl:if>
+                            </xsl:for-each>
+                        </div>
+                        <div class="slider-control">
+                            <div class="slider-pagination"></div>
+                            <div class="slider-btns">
+                                <div class="slider-button-prev"></div>
+                                <div class="slider-button-next"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xsl:otherwise>
+        </xsl:choose>
+
         <div class="school-info-home-block home-main-block">
             <xsl:if test="count(EditPasport/Eduinfo/PersonnelHead/PersonnelLst/Person/item) > 0">
                 <div class="director-info-block">
@@ -137,6 +195,84 @@
 
             </div>
         </div>
-    </xsl:template>
 
+        <xsl:if test="count(EditPasport/Eduinfo/Anons/item) > 0">
+            <div class="home-main-block alert-block">
+                <div class="big-title-block">Объявления</div>
+                <div class="flex-block">
+                    <xsl:for-each select="EditPasport/Eduinfo/Anons/item">
+                        <div class="item home-block">
+                            <div class="title-block"><xsl:value-of select="Name"/></div>
+                            <div class="text-style">
+                                <p><xsl:value-of select="ItemName"/></p>
+                            </div>
+                        </div>
+                    </xsl:for-each>
+                </div>
+            </div>
+        </xsl:if>
+
+        <xsl:if test="count(EditPasport/Eduinfo/Poll/item) > 0">
+            <div class="home-main-block opros-block">
+                <div class="big-title-block">Голосования</div>
+                <div class="flex-block">
+                    <xsl:for-each select="EditPasport/Eduinfo/Poll/item">
+                        <xsl:variable name="url" disable-output-escaping="yes"><xsl:value-of select="URL"/></xsl:variable>
+                        <iframe marginheight="0" src="{$url}" marginwidth="0" scrolling="auto" height="200" frameborder="0" class="golosfrm item "></iframe>
+                    </xsl:for-each>
+                </div>
+            </div>
+        </xsl:if>
+
+        <xsl:if test="EditPasport/Eduinfo/Comments='1'">
+            <div class="home-main-block comments-block">
+                <div class="big-title-block">Комментарии</div>
+                <div class="comments-form">
+                    <form action="/" method="POST" name="comment_form" id="comment_form" class="form-style">
+                        <input type="hidden" name="pid" value="1" />
+                        <input type="hidden" name="title" value="Главная" />
+                        <input type="hidden" name="notify" value="yes" />
+                        <div class="flex-block">
+                            <label class="item input-block">Фамилия, имя, отчество
+                                <input type="text" name="poster_name" placeholder="например, Иванов Андрей Сергеевич" />
+                            </label>
+                            <label class="item input-block">Ваш Email
+                                <input type="text" name="poster_email" placeholder="email@mail.ru" />
+                            </label>
+                            <label class="item input-block">Ваш статус
+                                <select name="poster_status">
+                                    <option value="-1">Выберите</option>
+                                    <option value="1">Педагог</option>
+                                    <option value="2">Ученик</option>
+                                    <option value="3">Родитель</option>
+                                    <option value="4">Преподаватель ВУЗа</option>
+                                    <option value="5">Администратор</option>
+                                    <option value="6">Иное</option>
+                                </select>
+                            </label>
+                        </div>
+                        <label class="input-block">Ваш комментарий
+                            <textarea name="comment"></textarea>
+                        </label>
+                        <div class="capcha-block">
+                            <div class="capcha-title">Введите код с картинки</div>
+                            <label class="input-block">
+                                <input type="text" maxlength="5" name="code" id="code" />
+                            </label>
+                            <div class="chapcha-img"><img name="capcha" id="capcha" src="/_ext/picutf.php" alt="" /></div>
+                            <div class="btn-row">
+                                <button type="submit" id="comment-button" name="send" class="btn-blue">Отправить</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="comments">
+                    <iframe id="comm" onload="autoIframe('comm');" height="1" marginHeight="0" src="/_ext/comment.php?1" frameBorder="0" width="100%" name="comm" marginWidth="0"></iframe>
+                </div>
+                <script type="text/javascript" src="/_ext/comment.js"></script>
+            </div>
+        </xsl:if>
+
+    </xsl:template>
 </xsl:stylesheet>
