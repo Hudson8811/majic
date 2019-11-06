@@ -2,7 +2,10 @@
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-    <xsl:template name="ScriptsAndCSS">
+    <xsl:variable name="pagename"><xsl:value-of select="page/meta/title"/></xsl:variable>
+    <xsl:variable name="pageId"><xsl:value-of select="page/meta/pageId"/></xsl:variable>
+
+    <xsl:template name="head">
         <meta charset="UTF-8"/>
         <meta name='generator' content='Конструктор сведений об образовательной организации. E-Publish. www.edusite.ru. - www.edusite.ru' />
         <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE" />
