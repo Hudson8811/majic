@@ -794,6 +794,8 @@ input[type=radio] {
 			img{
 				width: 100%;
 				display: block;
+				height: 300px;
+				object-fit: cover;
 			}
 		}
 		.slider-control{
