@@ -1405,6 +1405,9 @@ input[type=radio] {
 		font-weight: 400;
 		margin-bottom: 20px;
 	}
+	.table + .table-title{
+		margin-top: 30px;
+	}
 	.table{
 		display: table;
 		border-collapse: collapse;
