@@ -7,7 +7,7 @@
     <xsl:template name="sidebar">
 
         <div class="sidebar">
-            <div class="scroll-block mCustomScrollbar" data-mcs-theme="dark">
+            <div class="scroll-block">
                 <xsl:call-template name="sidemenu" />
 
                 <xsl:call-template name="news" />
