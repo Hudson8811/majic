@@ -149,9 +149,10 @@ $(document).ready(function() {
     var homeSwiper = new Swiper ('.home-slider .swiper-container', {
         loop: true,
         autoHeight: true,
-        autoplay: true,
+        v: true,
         pagination: {
             el: '.slider-pagination',
+            clickable:true
         },
 
         navigation: {
