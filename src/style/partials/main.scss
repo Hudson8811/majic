@@ -112,6 +112,7 @@ input, textarea{
 								left: (md: 0),
 								top: (md: 100%),
 								width: (md: 100%),
+								border-bottom: (md: 4px solid #47b1c8),
 				));
 				input{
 					@include media((
