@@ -2,7 +2,7 @@
   display: none;
   padding: 10px;
   min-height: 40px;
-  font-size:22px;
+  font-size:18px;
   color:#333;
   position: fixed;
   top: 0;
@@ -14,6 +14,9 @@
   height: 60px;
   justify-content: center;
   align-items: center;
+  letter-spacing: normal;
+  line-height: 1;
+  font-family: "Roboto", sans-serif;
   @include media((
           display: (sm: none),
   ));
@@ -28,43 +31,42 @@
   font-weight:bold;
 }
 
-
-.fs-outer button{
-  display:inline-block;
-  background:white !important;
-  color:black !important;
-  height:35px;
-  width:35px;
-  padding: 0;
-  vertical-align: middle;
-  @include media((
-          height: (sm: 28px),
-  ));
-}
-.fs-n{
-  font-size:16px;
-}
-.fs-m{
-  font-size:20px;
-}
-.fs-l{
-  font-size:24px;
-}
-
-.fs-outer, .cs-outer{
+.low-outer{
   display: block;
 }
 
-.cs-outer button{
+.low-outer button{
+  margin-top: 3px;
   display:inline-block;
-  height:35px;
-  width:35px;
+  background:white;
+  color:black;
+  height:33px;
+  width:33px;
   padding: 0;
+  border-radius: 100%;
+  border: 2px solid #47b1c8;
   vertical-align: middle;
-  @include media((
-          height: (sm: 28px),
-  ));
+  cursor: pointer;
+  overflow: hidden;
+  &:hover{
+    box-shadow: 0 0 3px 0px #000000;
+  }
+  &.active{
+    box-shadow: 0 0 4px 1px #000000;
+  }
 }
+
+
+.fs-n{
+  font-size:16px !important;
+}
+.fs-m{
+  font-size:20px !important;
+}
+.fs-l{
+  font-size:24px !important;
+}
+
 
 .cs-bw, .cs-bw:focus, .cs-bw:hover{
   color:black !important;
@@ -85,4 +87,73 @@
 .cs-yg, .cs-yg:focus, .cs-yg:hover{
   color: #a9e44d !important;
   background: #3b2717 !important;
+}
+
+.ff-n{
+  font-family: "Roboto", sans-serif;
+}
+.ff-z{
+  font-family: Georgia, 'Times New Roman', Times, serif !important;
+}
+
+.ls-s{
+  letter-spacing: initial;
+}
+.ls-m{
+  letter-spacing: 3px !important;
+}
+.ls-b{
+  letter-spacing: 6px !important;
+}
+
+
+.lh-s{
+  line-height: normal;
+}
+.lh-m{
+  line-height: 2rem !important;
+}
+.lh-b{
+  line-height: 3rem !important;
+}
+
+
+.lh-s-bg{
+  background: #ffffff url("../img/low/h1.png") center center no-repeat !important;
+}
+.lh-m-bg{
+  background: #ffffff url("../img/low/h2.png") center center no-repeat !important;
+}
+.lh-b-bg{
+  background: #ffffff url("../img/low/h3.png") center center no-repeat !important;
+}
+
+
+.img-c{
+  filter: none;
+  backdrop-filter: none;
+}
+.img-g{
+  filter: grayscale(100%) !important;
+  backdrop-filter: grayscale(100%);
+}
+.img-n{
+  filter: none;
+}
+
+.noImg{
+  display: none !important;
+}
+.noBg{
+  background-image: none !important;
+}
+
+.img-c-bg{
+  background: #ffffff url("../img/low/c1.png") center center no-repeat !important;
+}
+.img-g-bg{
+  background: #ffffff url("../img/low/c2.png") center center no-repeat !important;
+}
+.img-n-bg{
+  background: #ffffff url("../img/low/c3.png") center center no-repeat !important;
 }
