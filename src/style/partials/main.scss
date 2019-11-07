@@ -47,6 +47,9 @@ input, textarea{
 	));
 	&.bad-see{
 		padding-top: 120px;
+		.container{
+			width: 100%;
+		}
 		.fixed-header{
 			top: 60px;
 			.sidemenu{
