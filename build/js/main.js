@@ -138,7 +138,7 @@ $(document).ready(function() {
     var homeSwiper = new Swiper ('.home-slider .swiper-container', {
         loop: true,
         autoHeight: true,
-        v: true,
+        autoplay: true,
         pagination: {
             el: '.slider-pagination',
             clickable:true
