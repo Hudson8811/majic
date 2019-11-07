@@ -51,15 +51,9 @@ $(document).ready(function() {
 
 
         $('.cs-outer button').click(function(){
-            if ($(this).hasClass('cs-bw')){
-                $(selector2).css('color','');
-                $(selector2).css('background-color','');
-                $.removeCookie('cs');
-            } else {
-                $(selector2).css('color',$(this).css('color'));
-                $(selector2).css('background-color',$(this).css('background-color'));
-                $.cookie('cs',$(this).attr('id'));
-            }
+            $(selector2).css('color',$(this).css('color'));
+            $(selector2).css('background-color',$(this).css('background-color'));
+            $.cookie('cs',$(this).attr('id'));
             $('.cs-outer button').removeClass('active');
             $(this).addClass("active");
         });
