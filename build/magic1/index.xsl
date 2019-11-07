@@ -215,8 +215,8 @@
                 <div class="big-title-block">Голосования</div>
                 <div class="flex-block">
                     <xsl:for-each select="EditPasport/Eduinfo/Poll/item">
-                        <xsl:variable name="url" disable-output-escaping="yes"><xsl:value-of select="URL"/><![CDATA[&]]>skin=<xsl:value-of select="$design"/></xsl:variable>
-                        <iframe marginheight="0" src="{$url}" marginwidth="0" scrolling="auto" height="200" frameborder="0" class="golosfrm"></iframe>
+                        <xsl:variable name="url" disable-output-escaping="yes"><xsl:value-of select="URL"/></xsl:variable>
+                        <iframe marginheight="0" src="{$url}" marginwidth="0" scrolling="auto" height="200" frameborder="0" class="golosfrm item "></iframe>
                     </xsl:for-each>
                 </div>
             </div>
