@@ -4,10 +4,6 @@
 
 <xsl:template name="ScriptsAndCSS">
 
-    <xsl:variable name="design">
-      <xsl:value-of select="EditPasport/Eduinfo/Design"/>
-      <!-- magic1 -->
-    </xsl:variable>
 
     <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
     <meta name='generator' content='Конструктор сведений об образовательной организации. E-Publish. www.edusite.ru. - www.edusite.ru' />

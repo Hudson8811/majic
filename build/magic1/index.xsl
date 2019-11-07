@@ -5,6 +5,11 @@
     <xsl:import href="scriptsandcss.xsl"/>
 
 
+    <xsl:variable name="design">
+        <xsl:value-of select="EditPasport/Eduinfo/Design"/>
+        <!-- magic1 -->
+    </xsl:variable>
+
     <xsl:variable name="pagename" >Главная страница</xsl:variable>
 
     <xsl:template match="/">
