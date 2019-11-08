@@ -6,6 +6,10 @@ body{
   &.letter-spacing-big{
     .main .sidebar{
       width: 500px;
+      flex-shrink: 0;
+    }
+    .main-content {
+      width: calc(100% - 500px);
     }
   }
 
