@@ -41,7 +41,7 @@ body{
   }
 
   /*самый большой шрифт*/
-  .font-size-big{
+  &.font-size-big{
     @media screen and (min-width:1025px) {
       .school-info-home-block{
         display: block;
