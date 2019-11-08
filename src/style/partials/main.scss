@@ -1155,7 +1155,6 @@ input[type=radio] {
 			iframe{
 				border-radius: 5px;
 				border: 1px solid #d9d9d9;
-				border-top: none;
 				box-sizing: border-box;
 				position: relative;
 				.vopross td{
@@ -1177,6 +1176,7 @@ input[type=radio] {
 			.opros{
 				border-radius: 5px;
 				border: 1px solid #d9d9d9;
+				border-top: none;
 				box-sizing: border-box;
 				padding-bottom: 100px;
 				position: relative;
