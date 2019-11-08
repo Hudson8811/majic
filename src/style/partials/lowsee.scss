@@ -1,7 +1,15 @@
 body{
   /* межсимвольный интервал */
   &.letter-spacing-medium{
-
+    @media screen and (min-width:1025px) {
+      .main .sidebar{
+        width: 400px;
+        flex-shrink: 0;
+      }
+      .main-content {
+        width: calc(100% - 400px);
+      }
+    }
   }
   &.letter-spacing-big{
     @media screen and (min-width:1025px) {

@@ -306,7 +306,8 @@ input, textarea{
 				display: block;
 				position: absolute;
 				left: 0;
-				top: 2px;
+				top: 50%;
+				margin-top: -7px;
 				width: 15px;
 				height: 15px;
 				background: url("../img/phone.svg") center center no-repeat;
@@ -327,7 +328,8 @@ input, textarea{
 				display: block;
 				position: absolute;
 				left: 0;
-				top: 0;
+				top: 50%;
+				margin-top: -9px;
 				width: 13px;
 				height: 17px;
 				background: url("../img/addr.svg") center center no-repeat;
