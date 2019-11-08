@@ -1105,7 +1105,7 @@ input[type=radio] {
 						margin-left: (sm: -20px),
 						margin-top: (sm: -20px),
 		));
-		.item{
+		.item, iframe{
 			@include flex-block(300px,25px, 25px,false,3);
 			@include media((
 							margin-left: (sm: 20px),
@@ -1152,7 +1152,7 @@ input[type=radio] {
 			}
 		}
 		.flex-block{
-			.opros{
+			.opros, frame{
 				border-radius: 5px;
 				border: 1px solid #d9d9d9;
 				border-top: none;
