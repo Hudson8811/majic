@@ -1152,6 +1152,28 @@ input[type=radio] {
 			}
 		}
 		.flex-block{
+			iframe{
+				padding-top: 15px;
+				border-radius: 5px;
+				border: 1px solid #d9d9d9;
+				box-sizing: border-box;
+				padding-bottom: 100px;
+				position: relative;
+				.vopross td{
+					color: #ffffff;
+					font-size: 1.125rem;
+					font-weight: 400;
+					line-height: 1.375rem;
+					text-align: center;
+					border-radius: 5px 5px 0 0;
+					background-color: #47b1c8;
+					width: calc(100% + 2px);
+					margin-left: -1px;
+					margin-right: -1px;
+					box-sizing: border-box;
+					padding: 15px;
+				}
+			}
 			.opros{
 				border-radius: 5px;
 				border: 1px solid #d9d9d9;
