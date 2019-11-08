@@ -8,6 +8,11 @@ $(document).ready(function() {
 
         $('.fs-outer button').click(function(){
             $(selector).css('font-size',$(this).css('font-size'));
+            if ($(this).hasClass('fs-l')){
+                $('body').addClass('font-size-big');
+            } else {
+                $('body').removeClass('font-size-big');
+            }
             $.cookie('font-size',$(this).attr('id'));
             $('.fs-outer button').removeClass('active');
             $(this).addClass("active");
