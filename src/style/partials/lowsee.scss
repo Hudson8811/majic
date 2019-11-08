@@ -42,13 +42,15 @@ body{
 
   /*самый большой шрифт*/
   .font-size-big{
-    .school-info-home-block{
-      display: block;
-    }
-    .school-info-home-block .director-info-block, .school-info-home-block .director-info-block+.school-hello-block{
-      width: auto;
-      max-width: auto;
-      margin-left: 0;
+    @media screen and (min-width:1025px) {
+      .school-info-home-block{
+        display: block;
+      }
+      .school-info-home-block .director-info-block, .school-info-home-block .director-info-block+.school-hello-block{
+        width: auto;
+        max-width: auto;
+        margin-left: 0;
+      }
     }
   }
 }
