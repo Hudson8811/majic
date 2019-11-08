@@ -9,6 +9,9 @@ body{
       .main-content {
         width: calc(100% - 430px);
       }
+      .sidemenu .menu li.has-child>a::before{
+        top: 0.8rem;
+      }
     }
   }
   &.letter-spacing-big{
@@ -20,14 +23,25 @@ body{
       .main-content {
         width: calc(100% - 530px);
       }
+      .sidemenu .menu li.has-child>a::before{
+        top: 1.2rem;
+      }
     }
   }
 
   /* межстрочный интервал */
   &.line-height-medium{
-
+    @media screen and (min-width:1025px) {
+      .sidemenu .menu li.has-child>a::before{
+        top: 0.8rem;
+      }
+    }
   }
   &.line-height-big{
-
+    @media screen and (min-width:1025px) {
+      .sidemenu .menu li.has-child>a::before{
+        top: 1.2rem;
+      }
+    }
   }
 }
