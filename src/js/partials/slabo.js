@@ -4,6 +4,7 @@ $(document).ready(function() {
         var selector2='*:not(input,select,button)';
         var selector3='*:not(.sv_settings, .sv_settings *)';
         var selector4='img:not(.chapcha-img img)';
+        var selector5='.header.cover';
 
         $('.fs-outer button').click(function(){
             $(selector).css('font-size',$(this).css('font-size'));
@@ -21,6 +22,13 @@ $(document).ready(function() {
 
         $('.ls-outer button').click(function(){
             $(selector3).css('letter-spacing',$(this).css('letter-spacing'));
+            if ($(this).hasClass('ls-m')){
+                $('body').removeClass('letter-spacing-big').addClass('letter-spacing-medium');
+            } else if ($(this).hasClass('ls-b')){
+                $('body').removeClass('letter-spacing-medium').addClass('letter-spacing-big');
+            } else {
+                $('body').removeClass('letter-spacing-medium').removeClass('letter-spacing-big');
+            }
             $.cookie('letter-spacing',$(this).attr('id'));
             $('.ls-outer button').removeClass('active');
             $(this).addClass("active");
@@ -28,6 +36,13 @@ $(document).ready(function() {
 
         $('.lh-outer button').click(function(){
             $(selector3).css('line-height',$(this).css('line-height'));
+            if ($(this).hasClass('lh-m')){
+                $('body').removeClass('line-height-big').addClass('line-height-medium');
+            } else if ($(this).hasClass('lh-b')){
+                $('body').removeClass('line-height-medium').addClass('line-height-big');
+            } else {
+                $('body').removeClass('line-height-medium').removeClass('line-height-big');
+            }
             $.cookie('line-height',$(this).attr('id'));
             $('.lh-outer button').removeClass('active');
             $(this).addClass("active");
@@ -36,12 +51,22 @@ $(document).ready(function() {
         $('.img-outer button').click(function(){
             $(selector4).css('filter',$(this).css('line-height'));
             if ($(this).hasClass('img-n')){
-                $(selector4).addClass('noImg');
+                $(selector4).each(function () {
+                    var src = $(this).attr('src');
+                    $(this).attr('data-src',src).attr('src','');
+                });
                 $(selector2).addClass('noBg');
             } else  {
-                $(selector4).removeClass('noImg');
+                $(selector4).each(function () {
+                    var src = $(this).attr('data-src');
+                    if (src) $(this).attr('src',src).attr('data-src','');
+                });
                 $(selector3).removeClass('noBg');
-                $(selector4).css('filter',$(this).css('filter'));
+                if ($(this).hasClass('img-g')){
+                    $(selector4).addClass('fitlerGray');
+                } else {
+                    $(selector4).removeClass('fitlerGray');
+                }
             }
             $.cookie('imgFilter',$(this).attr('id'));
             $('.img-outer button').removeClass('active');
@@ -53,6 +78,7 @@ $(document).ready(function() {
         $('.cs-outer button').click(function(){
             $(selector2).css('color',$(this).css('color'));
             $(selector2).css('background-color',$(this).css('background-color'));
+            $(selector5).css('background-image','');
             $.cookie('cs',$(this).attr('id'));
             $('.cs-outer button').removeClass('active');
             $(this).addClass("active");
