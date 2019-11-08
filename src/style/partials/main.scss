@@ -1144,7 +1144,8 @@ input[type=radio] {
 				height: 26px;
 				position: absolute;
 				left: 0;
-				top: 1px;
+				top: 50%;
+				margin-top: -13px;
 				background: url("../img/opros.svg") center center no-repeat;
 				background-size: contain;
 			}
@@ -1257,7 +1258,8 @@ input[type=radio] {
 				height: 28px;
 				position: absolute;
 				left: 0;
-				top: 1px;
+				top: 50%;
+				margin-top: -14px;
 				background: url("../img/comment.svg") center center no-repeat;
 				background-size: contain;
 			}
