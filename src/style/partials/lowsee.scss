@@ -9,9 +9,6 @@ body{
       .main-content {
         width: calc(100% - 430px);
       }
-      .sidemenu .menu li.has-child>a::before{
-        top: 0.8rem;
-      }
     }
   }
   &.letter-spacing-big{
@@ -22,9 +19,6 @@ body{
       }
       .main-content {
         width: calc(100% - 530px);
-      }
-      .sidemenu .menu li.has-child>a::before{
-        top: 1.2rem;
       }
     }
   }
