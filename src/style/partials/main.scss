@@ -1335,9 +1335,12 @@ input[type=radio] {
 
 .inner-page-block{
 	padding: 24px 0 40px 20px;
-	border-bottom: 1px solid #47b1c8;
+	border: 1px solid #47b1c8;
 	font-size: 0.875rem;
 	line-height: 1.25rem;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
 	@include media((
 					line-height: (sm: 1rem),
 					padding: (sm: 18px 0 40px 0),
@@ -1351,8 +1354,9 @@ input[type=radio] {
 		font-weight: 400;
 		display: flex;
 		align-items: center;
-		width: calc(100% + 20px);
-		margin-left: -20px;
+		margin-left: -5px;
+		padding-left: 5px;
+		padding-right: 5px;
 		line-height: initial;
 		@include media((
 						font-size: (sm: 1.125rem),
@@ -1361,17 +1365,7 @@ input[type=radio] {
 						margin-left: (sm: 0),
 		));
 		&::after{
-			content: "";
-			display: block;
-			height: 2px;
-			background: #47b1c8;
-			width: auto;
-			margin-left: 9px;
-			flex-grow: 1;
-			@include media((
-							margin-left: (sm:0),
-							margin-top: (sm: 8px),
-			));
+
 		}
 	}
 
