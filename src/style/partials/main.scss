@@ -1105,7 +1105,7 @@ input[type=radio] {
 						margin-left: (sm: -20px),
 						margin-top: (sm: -20px),
 		));
-		.item, iframe{
+		.item{
 			@include flex-block(300px,25px, 25px,false,3);
 			@include media((
 							margin-left: (sm: 20px),
@@ -1152,21 +1152,14 @@ input[type=radio] {
 			}
 		}
 		.flex-block{
-			iframe{
+			.opros{
 				border-radius: 5px;
 				border: 1px solid #d9d9d9;
 				border-top: none;
 				box-sizing: border-box;
-				position: relative;
-			}
-			.opros{
-				border-radius: 5px;
-				border: 1px solid #d9d9d9;
-				box-sizing: border-box;
 				padding-bottom: 100px;
 				position: relative;
-				.title-block, .vopross td{
-					display: block;
+				.title-block{
 					color: #ffffff;
 					font-size: 1.125rem;
 					font-weight: 400;
