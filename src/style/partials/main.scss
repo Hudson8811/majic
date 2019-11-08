@@ -1105,7 +1105,7 @@ input[type=radio] {
 						margin-left: (sm: -20px),
 						margin-top: (sm: -20px),
 		));
-		.item{
+		.item, iframe{
 			@include flex-block(300px,25px, 25px,false,3);
 			@include media((
 							margin-left: (sm: 20px),
