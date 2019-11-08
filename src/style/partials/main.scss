@@ -1152,7 +1152,14 @@ input[type=radio] {
 			}
 		}
 		.flex-block{
-			.opros, iframe{
+			iframe{
+				border-radius: 5px;
+				border: 1px solid #d9d9d9;
+				border-top: none;
+				box-sizing: border-box;
+				position: relative;
+			}
+			.opros{
 				border-radius: 5px;
 				border: 1px solid #d9d9d9;
 				border-top: none;
