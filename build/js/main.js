@@ -295,23 +295,35 @@ $(document).ready(function() {
             $('#sv_on').addClass('active').html('Обычная версия');
             $('#wrapper').addClass('bad-see');
             $('#sv_settings').css('display','flex');
-            if ($.cookie('font-size')!==null){
+            if ($.cookie('font-size') && $.cookie('font-size')!==null){
                 $('#'+$.cookie('font-size')).click();
+            } else{
+                $('.fs-outer button:first-child').click();
             }
-            if ($.cookie('cs')!==null){
+            if ($.cookie('cs') && $.cookie('cs')!==null){
                 $('#'+$.cookie('cs')).click();
+            } else{
+                $('.cs-outer button:first-child').click();
             }
-            if ($.cookie('font-family')!==null){
+            if ($.cookie('font-family') && $.cookie('font-family')!==null){
                 $('#'+$.cookie('font-family')).click();
+            } else{
+                $('.ff-outer button:first-child').click();
             }
-            if ($.cookie('letter-spacing')!==null){
+            if ($.cookie('letter-spacing') && $.cookie('letter-spacing')!==null){
                 $('#'+$.cookie('letter-spacing')).click();
+            } else{
+                $('.ls-outer button:first-child').click();
             }
-            if ($.cookie('line-height')!==null){
+            if ($.cookie('line-height') && $.cookie('line-height')!==null){
                 $('#'+$.cookie('line-height')).click();
+            } else{
+                $('.lh-outer button:first-child').click();
             }
-            if ($.cookie('imgFilter')!==null){
+            if ($.cookie('imgFilter') && $.cookie('imgFilter')!==null){
                 $('#'+$.cookie('imgFilter')).click();
+            } else{
+                $('.img-outer  button:first-child').click();
             }
 
 
