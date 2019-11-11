@@ -266,6 +266,21 @@ $(document).ready(function() {
             $(selector2).css('color',$(this).css('color'));
             $(selector2).css('background-color',$(this).css('background-color'));
             $(selector5).css('background-image','');
+
+            if ($(this).hasClass('cs-bw')){
+                $('body').addClass('whiteAndBlack').removeClass(' blackAndWhite blueAndBlue yellowAndGray brownAndGreen');
+            } else if ($(this).hasClass('cs-wb')){
+                $('body').addClass('blackAndWhite').removeClass('whiteAndBlack  blueAndBlue yellowAndGray brownAndGreen');
+            } else if ($(this).hasClass('cs-bb')){
+                $('body').addClass('blueAndBlue').removeClass('whiteAndBlack blackAndWhite  yellowAndGray brownAndGreen');
+            } else if ($(this).hasClass('cs-gb')){
+                $('body').addClass('yellowAndGray').removeClass('whiteAndBlack blackAndWhite blueAndBlue  brownAndGreen');
+            } else if ($(this).hasClass('cs-yg')){
+                $('body').addClass('brownAndGreen').removeClass('whiteAndBlack blackAndWhite blueAndBlue yellowAndGray ');
+            } else {
+                $('body').removeClass('whiteAndBlack blackAndWhite blueAndBlue yellowAndGray brownAndGreen');
+            }
+
             $.cookie('cs',$(this).attr('id'));
             $('.cs-outer button').removeClass('active');
             $(this).addClass("active");

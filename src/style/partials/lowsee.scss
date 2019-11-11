@@ -53,4 +53,57 @@ body{
       }
     }
   }
+
+  /*цветовые схемы*/
+  &.whiteAndBlack{
+    .sidemenu .menu li.active::before {
+      background: black;
+    }
+    .btn-blue{
+      background-color: black;
+      color: white;
+      box-shadow: none;
+    }
+  }
+  &.blackAndWhite{
+    .sidemenu .menu li.active::before {
+      background: white;
+    }
+    .btn-blue{
+      background-color: white;
+      color: black;
+      box-shadow: none;
+    }
+  }
+  &.blueAndBlue{
+    .sidemenu .menu li.active::before {
+      background: #063462;
+    }
+    .btn-blue{
+      background-color: #063462;
+      color: #9dd1ff;
+      box-shadow: none;
+    }
+  }
+  &.yellowAndGray{
+    .sidemenu .menu li.active::before {
+      background: #4d4b43;
+    }
+    .btn-blue{
+      background-color: #4d4b43;
+      color: #f7f3d6;
+      box-shadow: none;
+    }
+  }
+  &.brownAndGreen{
+    .sidemenu .menu li.active::before {
+      background: #a9e44d;
+      box-shadow: none;
+    }
+    .btn-blue{
+      background-color: #a9e44d;
+      color: #3b2717;
+      box-shadow: none;
+    }
+  }
 }
