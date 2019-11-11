@@ -26,6 +26,9 @@ body{
 
   /* межстрочный интервал */
   &.line-height-medium{
+    .home-main-block.opros-block .flex-block .opros .content-block .btn-row{
+      position: static;
+    }
     @media screen and (min-width:1025px) {
       .sidemenu .menu li.has-child>a::before{
         top: 0.8rem;
@@ -33,6 +36,9 @@ body{
     }
   }
   &.line-height-big{
+    .home-main-block.opros-block .flex-block .opros .content-block .btn-row{
+      position: static;
+    }
     @media screen and (min-width:1025px) {
       .sidemenu .menu li.has-child>a::before{
         top: 1.3rem;
