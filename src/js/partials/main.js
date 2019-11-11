@@ -1,19 +1,21 @@
 $(document).ready(function() {
-     homeSwiper = new Swiper ('.home-slider .swiper-container', {
-        loop: true,
-        slidesPerView: 1,
-        autoHeight: true,
-        autoplay: true,
-        pagination: {
-            el: '.slider-pagination',
-            clickable:true
-        },
+    if ($('.home-slider .swiper-container').length){
+        homeSwiper = new Swiper ('.home-slider .swiper-container', {
+            loop: true,
+            slidesPerView: 1,
+            autoHeight: true,
+            autoplay: true,
+            pagination: {
+                el: '.slider-pagination',
+                clickable:true
+            },
 
-        navigation: {
-            nextEl: '.slider-button-next',
-            prevEl: '.slider-button-prev',
-        },
-    });
+            navigation: {
+                nextEl: '.slider-button-next',
+                prevEl: '.slider-button-prev',
+            },
+        });
+    }
 
 
 
