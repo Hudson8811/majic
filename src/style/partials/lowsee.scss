@@ -73,7 +73,11 @@ body{
     .imgAlt{
       border: 1px solid black;
     }
+    .inner-page-block{
+      border-color: black;
+    }
   }
+
   &.blackAndWhite{
     .sidemenu .menu li.active::before {
       background: white;
@@ -86,7 +90,11 @@ body{
     .imgAlt{
       border: 1px solid white;
     }
+    .inner-page-block{
+      border-color: white;
+    }
   }
+
   &.blueAndBlue{
     .sidemenu .menu li.active::before {
       background: #063462;
@@ -99,7 +107,11 @@ body{
     .imgAlt{
       border: 1px solid #063462;
     }
+    .inner-page-block{
+      border-color: #063462;
+    }
   }
+
   &.yellowAndGray{
     .sidemenu .menu li.active::before {
       background: #4d4b43;
@@ -112,7 +124,11 @@ body{
     .imgAlt{
       border: 1px solid #4d4b43;
     }
+    .inner-page-block{
+      border-color: #4d4b43;
+    }
   }
+
   &.brownAndGreen{
     .sidemenu .menu li.active::before {
       background: #a9e44d;
@@ -125,6 +141,9 @@ body{
     }
     .imgAlt{
       border: 1px solid #a9e44d;
+    }
+    .inner-page-block{
+      border-color: #a9e44d;
     }
   }
 }
