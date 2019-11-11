@@ -57,14 +57,17 @@ $(document).ready(function() {
             $(selector4).css('filter',$(this).css('line-height'));
             if ($(this).hasClass('img-n')){
                 $(selector4).each(function () {
-                    var src = $(this).attr('src');
-                    $(this).attr('data-src',src).attr('src','');
+                    var alt = $(this).attr('alt');
+                    var thisWidth = $(this).width();
+                    var thisHeight = $(this).height();
+                    $(this).after('<span class="imgAlt" style="width: '+thisWidth+'px; height: '+thisHeight+'px; max-width: 100%; display: block;">'+alt+'</span>');
+                    $(this).addClass('noImg');
                 });
                 $(selector2).addClass('noBg');
             } else  {
                 $(selector4).each(function () {
-                    var src = $(this).attr('data-src');
-                    if (src) $(this).attr('src',src).attr('data-src','');
+                    $(this).removeClass('noImg');
+                    $('.imgAlt').remove();
                 });
                 $(selector3).removeClass('noBg');
                 if ($(this).hasClass('img-g')){
