@@ -1,6 +1,7 @@
 $(document).ready(function() {
-    var homeSwiper = new Swiper ('.home-slider .swiper-container', {
+     homeSwiper = new Swiper ('.home-slider .swiper-container', {
         loop: true,
+        slidesPerView: 1,
         autoHeight: true,
         autoplay: true,
         pagination: {

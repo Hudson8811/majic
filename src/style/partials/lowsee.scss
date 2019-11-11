@@ -70,6 +70,9 @@ body{
       color: white;
       box-shadow: none;
     }
+    .imgAlt{
+      border: 1px solid black;
+    }
   }
   &.blackAndWhite{
     .sidemenu .menu li.active::before {
@@ -79,6 +82,9 @@ body{
       background-color: white;
       color: black;
       box-shadow: none;
+    }
+    .imgAlt{
+      border: 1px solid white;
     }
   }
   &.blueAndBlue{
@@ -90,6 +96,9 @@ body{
       color: #9dd1ff;
       box-shadow: none;
     }
+    .imgAlt{
+      border: 1px solid #063462;
+    }
   }
   &.yellowAndGray{
     .sidemenu .menu li.active::before {
@@ -99,6 +108,9 @@ body{
       background-color: #4d4b43;
       color: #f7f3d6;
       box-shadow: none;
+    }
+    .imgAlt{
+      border: 1px solid #4d4b43;
     }
   }
   &.brownAndGreen{
@@ -110,6 +122,9 @@ body{
       background-color: #a9e44d;
       color: #3b2717;
       box-shadow: none;
+    }
+    .imgAlt{
+      border: 1px solid #a9e44d;
     }
   }
 }

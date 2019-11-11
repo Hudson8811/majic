@@ -135,8 +135,9 @@
 /* my scripts */
 
 $(document).ready(function() {
-    var homeSwiper = new Swiper ('.home-slider .swiper-container', {
+     homeSwiper = new Swiper ('.home-slider .swiper-container', {
         loop: true,
+        slidesPerView: 1,
         autoHeight: true,
         autoplay: true,
         pagination: {
@@ -239,7 +240,7 @@ $(document).ready(function() {
                     var alt = $(this).attr('alt');
                     var thisWidth = $(this).width();
                     var thisHeight = $(this).height();
-                    $(this).after('<span class="imgAlt" style="width: '+thisWidth+'px; height: '+thisHeight+'px; max-width: 100%; display: block;">'+alt+'</span>');
+                    $(this).after('<span class="imgAlt" style=" padding: 10px; box-sizing: border-box; width: '+thisWidth+'px; height: '+thisHeight+'px; max-width: 100%; display: block;">'+alt+'</span>');
                     $(this).addClass('noImg');
                 });
                 $(selector2).addClass('noBg');
@@ -258,6 +259,7 @@ $(document).ready(function() {
             $.cookie('imgFilter',$(this).attr('id'));
             $('.img-outer button').removeClass('active');
             $(this).addClass("active");
+            if (typeof(homeSwiper) !== "undefined" ) homeSwiper.update();
         });
 
 
