@@ -248,18 +248,23 @@ $(document).ready(function() {
             $(this).addClass("active");
         });
 
+        var imgOn = 1;
+
         $('.img-outer button').click(function(){
             $(selector4).css('filter',$(this).css('line-height'));
             if ($(this).hasClass('img-n')){
-                $(selector4).each(function () {
-                    var alt = $(this).attr('alt');
-                    var thisWidth = $(this).width();
-                    var thisHeight = $(this).height();
-                    $(this).after('<span class="imgAlt" style=" padding: 10px; box-sizing: border-box; width: '+thisWidth+'px; height: '+thisHeight+'px; max-width: 100%; display: block;">'+alt+'</span>');
-                    $(this).addClass('noImg');
-                });
-                $(selector2).addClass('noBg');
-            } else  {
+                if (imgOn == 1){
+                    $(selector4).each(function () {
+                        var alt = $(this).attr('alt');
+                        var thisWidth = $(this).width();
+                        var thisHeight = $(this).height();
+                        $(this).after('<span class="imgAlt" style=" padding: 10px; box-sizing: border-box; width: '+thisWidth+'px; height: '+thisHeight+'px; max-width: 100%; display: block;">'+alt+'</span>');
+                        $(this).addClass('noImg');
+                    });
+                    $(selector2).addClass('noBg');
+                    imgOn = 0;
+                }
+            } else {
                 $(selector4).each(function () {
                     $(this).removeClass('noImg');
                     $('.imgAlt').remove();
@@ -270,6 +275,7 @@ $(document).ready(function() {
                 } else {
                     $(selector4).removeClass('fitlerGray');
                 }
+                imgOn = 1;
             }
             $.cookie('imgFilter',$(this).attr('id'));
             $('.img-outer button').removeClass('active');

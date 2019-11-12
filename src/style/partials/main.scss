@@ -919,6 +919,7 @@ input[type=radio] {
 				object-fit: cover;
 				overflow: hidden;
 				border-radius: 100%;
+				box-sizing: border-box;
 			}
 		}
 		.director-info{

@@ -1997,6 +1997,8 @@ input[type=radio]:checked {
      object-fit: cover;
   overflow: hidden;
   border-radius: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .school-info-home-block .director-info-block .director-info {
@@ -2621,6 +2623,10 @@ body.whiteAndBlack .inner-page-block {
   border-color: black;
 }
 
+body.whiteAndBlack .school-info-home-block .director-info-block .director-photo img.fitlerGray {
+  border: 1px solid #000000;
+}
+
 body.blackAndWhite .sidemenu .menu li.active::before {
   background: white;
 }
@@ -2638,6 +2644,10 @@ body.blackAndWhite .imgAlt {
 
 body.blackAndWhite .inner-page-block {
   border-color: white;
+}
+
+body.blackAndWhite .school-info-home-block .director-info-block .director-photo img.fitlerGray {
+  border: 1px solid #ffffff;
 }
 
 body.blueAndBlue .sidemenu .menu li.active::before {
@@ -2659,6 +2669,10 @@ body.blueAndBlue .inner-page-block {
   border-color: #063462;
 }
 
+body.blueAndBlue .school-info-home-block .director-info-block .director-photo img.fitlerGray {
+  border: 1px solid #063462;
+}
+
 body.yellowAndGray .sidemenu .menu li.active::before {
   background: #4d4b43;
 }
@@ -2676,6 +2690,10 @@ body.yellowAndGray .imgAlt {
 
 body.yellowAndGray .inner-page-block {
   border-color: #4d4b43;
+}
+
+body.yellowAndGray .school-info-home-block .director-info-block .director-photo img.fitlerGray {
+  border: 1px solid #4d4b43;
 }
 
 body.brownAndGreen .sidemenu .menu li.active::before {
@@ -2697,6 +2715,10 @@ body.brownAndGreen .imgAlt {
 
 body.brownAndGreen .inner-page-block {
   border-color: #a9e44d;
+}
+
+body.brownAndGreen .school-info-home-block .director-info-block .director-photo img.fitlerGray {
+  border: 1px solid #a9e44d;
 }
 
 @media all and (min-width: 1025px) {
