@@ -88,6 +88,16 @@ body{
       }
     }
 
+    .cookies_message{
+      border-color:#000000;
+      .inner{
+        .cookies_button{
+          background: #000000 !important;
+          color: #ffffff !important;;
+        }
+      }
+    }
+
   }
 
   &.blackAndWhite{
@@ -113,6 +123,15 @@ body{
               border: 1px solid #ffffff;
             }
           }
+        }
+      }
+    }
+    .cookies_message{
+      border-color:#ffffff;
+      .inner{
+        .cookies_button{
+          background: #ffffff !important;
+          color: #000000 !important;;
         }
       }
     }
@@ -145,6 +164,16 @@ body{
         }
       }
     }
+
+    .cookies_message{
+      border-color:#063462;
+      .inner{
+        .cookies_button{
+          background: #063462 !important;
+          color: #9dd1ff !important;;
+        }
+      }
+    }
   }
 
   &.yellowAndGray{
@@ -171,6 +200,16 @@ body{
               border: 1px solid #4d4b43;
             }
           }
+        }
+      }
+    }
+
+    .cookies_message{
+      border-color:#4d4b43;
+      .inner{
+        .cookies_button{
+          background: #4d4b43 !important;
+          color: #f7f3d6 !important;;
         }
       }
     }
@@ -203,5 +242,15 @@ body{
         }
       }
     }
+    .cookies_message{
+      border-color:#a9e44d;
+      .inner{
+        .cookies_button{
+          background: #a9e44d !important;
+          color: #3b2717 !important;;
+        }
+      }
+    }
   }
+
 }
