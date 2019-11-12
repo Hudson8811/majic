@@ -1114,6 +1114,10 @@ textarea {
   max-height: calc(100vh - 120px);
 }
 
+#wrapper.bad-see .header.cover::before {
+  display: none;
+}
+
 .fixed-header {
   position: fixed;
   left: 0;

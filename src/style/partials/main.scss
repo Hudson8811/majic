@@ -64,6 +64,10 @@ input, textarea{
 				}
 			}
 		}
+
+		.header.cover::before{
+			display: none;
+		}
 	}
 }
 
