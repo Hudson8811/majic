@@ -1,9 +1,9 @@
 $(document).ready(function() {
     $(document).ready(function(){
         var selector='html';
-        var selector2='*:not(input,select,button)';
-        var selector3='*:not(.sv_settings, .sv_settings *)';
-        var selector4='img:not(.chapcha-img img)';
+        var selector2='*:not(input,select,button,.highslide-container,.highslide-container *)';
+        var selector3='*:not(.sv_settings, .sv_settings *,.highslide-container,.highslide-container *)';
+        var selector4='*:not(.highslide-container) > img:not(.chapcha-img img)';
         var selector5='.header.cover';
 
         $('.fs-outer button').click(function(){
