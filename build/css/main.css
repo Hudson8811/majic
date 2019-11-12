@@ -2674,6 +2674,8 @@ body.whiteAndBlack .school-info-home-block .director-info-block .director-photo 
 
 body.whiteAndBlack .cookies_message {
   border-color: #000000;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 body.whiteAndBlack .cookies_message .inner .cookies_button {
@@ -2706,6 +2708,8 @@ body.blackAndWhite .school-info-home-block .director-info-block .director-photo 
 
 body.blackAndWhite .cookies_message {
   border-color: #ffffff;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 body.blackAndWhite .cookies_message .inner .cookies_button {
@@ -2738,6 +2742,8 @@ body.blueAndBlue .school-info-home-block .director-info-block .director-photo im
 
 body.blueAndBlue .cookies_message {
   border-color: #063462;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 body.blueAndBlue .cookies_message .inner .cookies_button {
@@ -2770,6 +2776,8 @@ body.yellowAndGray .school-info-home-block .director-info-block .director-photo 
 
 body.yellowAndGray .cookies_message {
   border-color: #4d4b43;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 body.yellowAndGray .cookies_message .inner .cookies_button {
@@ -2804,6 +2812,8 @@ body.brownAndGreen .school-info-home-block .director-info-block .director-photo 
 
 body.brownAndGreen .cookies_message {
   border-color: #a9e44d;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 body.brownAndGreen .cookies_message .inner .cookies_button {
