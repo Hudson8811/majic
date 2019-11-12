@@ -37,10 +37,23 @@ $(document).ready(function() {
     });
 
 
+
+
     $('.sidebar .news').click(function () {
         if (!$(this).hasClass('full-news')){
             $(this).addClass('full-news').siblings().removeClass('full-news');
         }
     });
 
+});
+
+$(function () {
+    $('.has-child ul li a').each(function () {
+        var location = window.location.href;
+        var link = this.href;
+        if(location == link) {
+            $(this).parent('li').addClass('active');
+            $(this).parents('.has-child').addClass('opened');
+        }
+    });
 });
