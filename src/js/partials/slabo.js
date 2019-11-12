@@ -13,14 +13,14 @@ $(document).ready(function() {
             } else {
                 $('body').removeClass('font-size-big');
             }
-            $.cookie('font-size',$(this).attr('id'));
+            $.cookie('font-size',$(this).attr('id'), { expires: 7, path: '' });
             $('.fs-outer button').removeClass('active');
             $(this).addClass("active");
         });
 
         $('.ff-outer button').click(function(){
             $(selector3).css('font-family',$(this).css('font-family'));
-            $.cookie('font-family',$(this).attr('id'));
+            $.cookie('font-family',$(this).attr('id'), { expires: 7, path: '' });
             $('.ff-outer button').removeClass('active');
             $(this).addClass("active");
         });
@@ -34,7 +34,7 @@ $(document).ready(function() {
             } else {
                 $('body').removeClass('letter-spacing-medium').removeClass('letter-spacing-big');
             }
-            $.cookie('letter-spacing',$(this).attr('id'));
+            $.cookie('letter-spacing',$(this).attr('id'), { expires: 7, path: '' });
             $('.ls-outer button').removeClass('active');
             $(this).addClass("active");
         });
@@ -48,7 +48,7 @@ $(document).ready(function() {
             } else {
                 $('body').removeClass('line-height-medium').removeClass('line-height-big');
             }
-            $.cookie('line-height',$(this).attr('id'));
+            $.cookie('line-height',$(this).attr('id'), { expires: 7, path: '' });
             $('.lh-outer button').removeClass('active');
             $(this).addClass("active");
         });
@@ -82,7 +82,7 @@ $(document).ready(function() {
                 }
                 imgOn = 1;
             }
-            $.cookie('imgFilter',$(this).attr('id'));
+            $.cookie('imgFilter',$(this).attr('id'), { expires: 7, path: '' });
             $('.img-outer button').removeClass('active');
             $(this).addClass("active");
             if (typeof(homeSwiper) !== "undefined" ) homeSwiper.update();
@@ -109,7 +109,7 @@ $(document).ready(function() {
                 $('body').removeClass('whiteAndBlack blackAndWhite blueAndBlue yellowAndGray brownAndGreen');
             }
 
-            $.cookie('cs',$(this).attr('id'));
+            $.cookie('cs',$(this).attr('id'), { expires: 7, path: '' });
             $('.cs-outer button').removeClass('active');
             $(this).addClass("active");
         });
