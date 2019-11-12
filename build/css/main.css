@@ -1452,6 +1452,12 @@ textarea {
   z-index: -1;
 }
 
+.main img {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #47b1c8;
+}
+
 .main .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2668,8 +2674,8 @@ body.whiteAndBlack .inner-page-block {
   border-color: black;
 }
 
-body.whiteAndBlack .school-info-home-block .director-info-block .director-photo img.fitlerGray {
-  border: 1px solid #000000;
+body.whiteAndBlack .main img {
+  border-color: #000000;
 }
 
 body.whiteAndBlack .cookies_message {
@@ -2702,8 +2708,8 @@ body.blackAndWhite .inner-page-block {
   border-color: white;
 }
 
-body.blackAndWhite .school-info-home-block .director-info-block .director-photo img.fitlerGray {
-  border: 1px solid #ffffff;
+body.blackAndWhite .main img {
+  border-color: #ffffff;
 }
 
 body.blackAndWhite .cookies_message {
@@ -2736,8 +2742,8 @@ body.blueAndBlue .inner-page-block {
   border-color: #063462;
 }
 
-body.blueAndBlue .school-info-home-block .director-info-block .director-photo img.fitlerGray {
-  border: 1px solid #063462;
+body.blueAndBlue .main img {
+  border-color: #063462;
 }
 
 body.blueAndBlue .cookies_message {
@@ -2770,8 +2776,8 @@ body.yellowAndGray .inner-page-block {
   border-color: #4d4b43;
 }
 
-body.yellowAndGray .school-info-home-block .director-info-block .director-photo img.fitlerGray {
-  border: 1px solid #4d4b43;
+body.yellowAndGray .main img {
+  border-color: #4d4b43;
 }
 
 body.yellowAndGray .cookies_message {
@@ -2806,8 +2812,8 @@ body.brownAndGreen .inner-page-block {
   border-color: #a9e44d;
 }
 
-body.brownAndGreen .school-info-home-block .director-info-block .director-photo img.fitlerGray {
-  border: 1px solid #a9e44d;
+body.brownAndGreen .main img {
+  border-color: #a9e44d;
 }
 
 body.brownAndGreen .cookies_message {

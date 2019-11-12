@@ -421,6 +421,11 @@ input, textarea{
 						display: (md: none),
 		));
 	}
+
+	img{
+		box-sizing: border-box;
+		border: 1px solid #47b1c8;
+	}
 	.container{
 		display: flex;
 		justify-content: space-between;

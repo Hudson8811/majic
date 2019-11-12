@@ -76,16 +76,8 @@ body{
     .inner-page-block{
       border-color: black;
     }
-    .school-info-home-block{
-      .director-info-block{
-        .director-photo{
-          img{
-            &.fitlerGray{
-              border: 1px solid #000000;
-            }
-          }
-        }
-      }
+    .main img{
+      border-color: #000000;
     }
 
     .cookies_message{
@@ -116,16 +108,8 @@ body{
     .inner-page-block{
       border-color: white;
     }
-    .school-info-home-block{
-      .director-info-block{
-        .director-photo{
-          img{
-            &.fitlerGray{
-              border: 1px solid #ffffff;
-            }
-          }
-        }
-      }
+    .main img{
+      border-color: #ffffff;
     }
     .cookies_message{
       border-color:#ffffff;
@@ -155,16 +139,8 @@ body{
       border-color: #063462;
     }
 
-    .school-info-home-block{
-      .director-info-block{
-        .director-photo{
-          img{
-            &.fitlerGray{
-              border: 1px solid #063462;
-            }
-          }
-        }
-      }
+    .main img{
+      border-color: #063462;
     }
 
     .cookies_message{
@@ -194,17 +170,8 @@ body{
     .inner-page-block{
       border-color: #4d4b43;
     }
-
-    .school-info-home-block{
-      .director-info-block{
-        .director-photo{
-          img{
-            &.fitlerGray{
-              border: 1px solid #4d4b43;
-            }
-          }
-        }
-      }
+    .main img{
+      border-color: #4d4b43;
     }
 
     .cookies_message{
@@ -235,17 +202,10 @@ body{
     .inner-page-block{
       border-color: #a9e44d;
     }
-    .school-info-home-block{
-      .director-info-block{
-        .director-photo{
-          img{
-            &.fitlerGray{
-              border: 1px solid #a9e44d;
-            }
-          }
-        }
-      }
+    .main img{
+      border-color: #a9e44d;
     }
+
     .cookies_message{
       border-color:#a9e44d;
       box-shadow: none;
