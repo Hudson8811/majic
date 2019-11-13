@@ -87,8 +87,6 @@ $(document).ready(function() {
         if (typeof(homeSwiper) !== "undefined" ) homeSwiper.update();
     });
 
-
-
     $('.cs-outer button').click(function(){
         $(selector2).css('color',$(this).css('color'));
         $(selector2).css('background-color',$(this).css('background-color'));
@@ -148,10 +146,7 @@ $(document).ready(function() {
         } else{
             $('.img-outer  button:first-child').click();
         }
-
-
     }
-
 
     $('#sv_on').click(
         function(){
