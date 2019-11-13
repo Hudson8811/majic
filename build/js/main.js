@@ -181,9 +181,7 @@ $(document).ready(function() {
         }
     });
 
-});
 
-$(function () {
     $('.has-child ul li a').each(function () {
         var location = window.location.href;
         var link = this.href;
@@ -193,6 +191,20 @@ $(function () {
         }
     });
 });
+
+function autoIframe(frameId){
+    if (window.parent && window.parent.autoIframe){
+        try{
+            frame = document.getElementById(frameId);
+            innerDoc = (frame.contentDocument) ? frame.contentDocument : frame.contentWindow.document;
+            objToResize = (frame.style) ? frame.style : frame;
+            objToResize.height = innerDoc.body.scrollHeight;
+        }
+        catch(err){
+            window.status = err.message;
+        }
+    }
+}
 $(document).ready(function() {
     $(document).ready(function(){
         var selector='html';
