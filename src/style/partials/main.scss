@@ -1415,7 +1415,7 @@ input[type=radio] {
 			background-size: contain;
 			position: absolute;
 			left: 0;
-			top: 0;
+			top: 1px;
 		}
 		.document-name{
 			text-decoration: underline;
@@ -1430,6 +1430,36 @@ input[type=radio] {
 			.document-name{
 				text-decoration: none;
 			}
+		}
+	}
+	.email-link{
+		padding-left: 20px;
+		position: relative;
+		&:before{
+			content: "";
+			width: 17px;
+			height: 16px;
+			display: block;
+			background: url("../img/mail.svg") center center no-repeat;
+			background-size: contain;
+			position: absolute;
+			left: -2px;
+			top: 1px;
+		}
+	}
+	.outer-link{
+		padding-left: 20px;
+		position: relative;
+		&:before{
+			content: "";
+			width: 17px;
+			height: 16px;
+			display: block;
+			background: url("../img/open_in_new.svg") center center no-repeat;
+			background-size: contain;
+			position: absolute;
+			left: -2px;
+			top: 1px;
 		}
 	}
 	.table-title{
