@@ -111,13 +111,13 @@
           <xsl:if test="$site!=''">
             <div class="tr">
               <div class="td">Сайт:</div>
-              <div class="td"><a href='{$site}' target='_blank'><xsl:value-of select="Site"/></a></div>
+              <div class="td"><a class="outer-link" href='{$site}' target='_blank'><xsl:value-of select="Site"/></a></div>
             </div>
           </xsl:if>
           <xsl:if test="$mail!=''">
             <div class="tr">
               <div class="td">Email:</div>
-              <div class="td"><a href="{$mail}"><xsl:value-of select="Mail"/></a></div>
+              <div class="td"><a class="email-link" href="{$mail}"><xsl:value-of select="Mail"/></a></div>
             </div>
           </xsl:if>
           <xsl:if test="$link!=''">
@@ -182,7 +182,7 @@
             <div class="td">
               <xsl:for-each select="EditPasport/Eduinfo/FaceInformation/MainContacts/Contacts/Mail">
                 <xsl:variable name="mail"><xsl:value-of select="item"/></xsl:variable>
-                <xsl:if test="$mail!=''"><a href='mailto:{$mail}' target='_blank'><xsl:value-of select="item"/></a><br/></xsl:if>
+                <xsl:if test="$mail!=''"><a class="email-link" href='mailto:{$mail}' target='_blank'><xsl:value-of select="item"/></a><br/></xsl:if>
               </xsl:for-each>
             </div>
           </div>
